@@ -15,10 +15,9 @@ function Map:new()
     function map:draw()
         for i=0,800 do
             for j=0,600 do
-                print(vec2.new(i,j).x)
                 local y = self:noise(vec2.new(i,j))
                 graphics.setColor(y, y, y)
-                graphics.point(i,j)
+                graphics.points(i,j)
             end
         end
     end
