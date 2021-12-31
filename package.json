@@ -1,0 +1,24 @@
+{
+  "name": "discovering-worlds-love2d",
+  "version": "0.0.0",
+  "description": "Trying to implement world generation as described at https://undiscoveredworlds.blogspot.com/2019/02/basic-continents.html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p release && npx love.js --compatibility --title \"Discovering Worlds\" src release",
+    "zip": "rm -f discovering-worlds.zip; pushd release; zip -9 ../discovering-worlds.zip *; popd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimOfLeisure/discovering-worlds-love2d.git"
+  },
+  "author": "JimOfLeisure",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JimOfLeisure/discovering-worlds-love2d/issues"
+  },
+  "homepage": "https://github.com/JimOfLeisure/discovering-worlds-love2d#readme",
+  "dependencies": {
+    "love.js": "^11.3.1"
+  }
+}
