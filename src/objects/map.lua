@@ -14,10 +14,9 @@ function Map:new()
         return love_noise(pos.x * self.noise_mult + self.seed.x, pos.y * self.noise_mult + self.seed.y)
     end
     function map:draw()
-        for i=0,400 do
-            for j=0,300 do
-                local y = self:noise(vec2.new(i,j))
-                print(y)
+        for j=0,600 do
+            for i=0,800 do
+                local y = self:noise(vec2:new(i,j))
                 graphics.setColor(y, y, y)
                 graphics.points(i,j)
             end
