@@ -9,6 +9,7 @@ local map = Map:new()
 player = Player:new()
 
 function love.load()
+    map:load()
 end
 
 function love.update(dt)
