@@ -32,5 +32,4 @@ function love.keypressed(key)
     if love.keyboard.isDown("down") then
         player.pos:move(vec2:new(0, 1))
     end
-    print(player.pos.x, player.pos.y)
 end

@@ -14,13 +14,13 @@ function Map:new()
         return love_noise(pos.x * self.noise_mult + self.seed.x, pos.y * self.noise_mult + self.seed.y)
     end
     function map:draw(pos)
-        for j=-300,300,5 do
-            for i=-400,400,5 do
-                local x = player.pos.x * 20 + i
-                local y = player.pos.y * 20 + j
+        for j=-0,600,5 do
+            for i=-0,800,5 do
+                local x = player.pos.x * 20 + i - 400
+                local y = player.pos.y * 20 + j - 300
                 local h = self:noise(vec2:new(x,y))
                 graphics.setColor(h, h, h)
-                graphics.rectangle("fill", x, y, 5, 5)
+                graphics.rectangle("fill", i, j, 5, 5)
             end
         end
     end
