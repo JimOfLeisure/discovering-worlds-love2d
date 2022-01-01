@@ -36,11 +36,6 @@ end
 
 function Map:new()
     local map = {}
-    -- map.seed = vec2:new(0.1, 0.1)
-    -- map.noise_mult = 0.002
-    -- function map:noise(pos)
-    --     return love_noise(pos.x * self.noise_mult + self.seed.x, pos.y * self.noise_mult + self.seed.y)
-    -- end
 
     function map:load()
         -- map_image = perlin_map_data()
