@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "mkdir -p release && npx love.js --compatibility --title \"Discovering Worlds\" src release",
-    "zip": "rm -f discovering-worlds.zip; pushd release; zip -9 ../discovering-worlds.zip *; popd"
+    "zip": "rm -f discovering-worlds.zip; pushd release; zip -9 -r ../discovering-worlds.zip *; popd",
+    "love": "rm -f discovering-worlds.love; pushd src; zip -9 -r ../discovering-worlds.love *; popd"
   },
   "repository": {
     "type": "git",
