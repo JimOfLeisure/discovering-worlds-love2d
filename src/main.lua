@@ -21,15 +21,16 @@ end
 
 function love.keypressed(key)
     if love.keyboard.isDown("left") then
-        player.pos:move(vec2:new(-10, 0))
+        player.pos:move(vec2:new(-1, 0))
     end
     if love.keyboard.isDown("right") then
-        player.pos:move(vec2:new(10, 0))
+        player.pos:move(vec2:new(1, 0))
     end
     if love.keyboard.isDown("up") then
-        player.pos:move(vec2:new(0, -10))
+        player.pos:move(vec2:new(0, -1))
     end
     if love.keyboard.isDown("down") then
-        player.pos:move(vec2:new(0, 10))
+        player.pos:move(vec2:new(0, 1))
     end
+    print(player.pos.x, player.pos.y)
 end

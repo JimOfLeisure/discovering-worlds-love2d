@@ -16,8 +16,8 @@ function Map:new()
     function map:draw(pos)
         for j=-300,300,5 do
             for i=-400,400,5 do
-                local x = player.pos.x * 10 + i
-                local y = player.pos.y * 10 + j
+                local x = player.pos.x * 20 + i
+                local y = player.pos.y * 20 + j
                 local h = self:noise(vec2:new(x,y))
                 graphics.setColor(h, h, h)
                 graphics.rectangle("fill", x, y, 5, 5)
