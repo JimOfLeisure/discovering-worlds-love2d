@@ -6,7 +6,7 @@ Player = require("objects/player")
 local graphics = love.graphics
 
 local map = Map:new()
-player = Player:new()
+local player = Player:new(vec2:new(20, 15))
 
 function love.load()
     map:load()

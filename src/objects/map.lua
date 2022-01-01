@@ -8,7 +8,7 @@ local graphics = love.graphics
 
 local map_image
 
-local seed = vec2:new(0.1, 0.1)
+local seed = vec2:new(love.math.random() * 250 , love.math.random() * 250)
 local noise_mult = 0.002
 local function noise(pos)
     return love_noise(pos.x * noise_mult + seed.x, pos.y * noise_mult + seed.y)
@@ -53,7 +53,7 @@ function Map:new()
 
     function map:draw(pos)
         graphics.setColor(1, 1, 1, 1)
-        graphics.draw(map_image, -player.pos.x * 20, -player.pos.y * 20)
+        graphics.draw(map_image, -pos.x * 20, -pos.y * 20)
     end
 
     return map
